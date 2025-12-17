@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap');
+
+:root {
+    --bg-dark: #020617;
+    --bg-light: #f8fafc;
+    --text-dark: #e5e7eb;
+    --text-light: #020617;
+    --card-dark: rgba(255,255,255,0.05);
+    --card-light: rgba(0,0,0,0.05);
+    --muted-dark: #94a3b8;
+    --muted-light: #6b7280;
+    --main: #38bdf8;
+    --gradient: linear-gradient(135deg, #38bdf8, #6366f1);
+}
+
+/* Reset */
+* { margin:0; padding:0; box-sizing:border-box; font-family:'Cairo', sans-serif; }
+body { background: var(--bg-dark); color: var(--text-dark); line-height: 1.7; transition: 0.5s; }
+
+/* Navbar */
+.navbar { position: fixed; width:100%; top:0; padding:20px 10%; display:flex; justify-content:space-between; align-items:center; backdrop-filter: blur(10px); background: rgba(2,6,23,0.7); z-index:1000; transition:0.5s; }
+.logo { font-size:22px; font-weight:700; background: var(--gradient); -webkit-background-clip:text; color: transparent; }
+.navbar a { color: var(--muted-dark); margin-right:25px; text-decoration:none; transition:0.3s; }
+.navbar a:hover { color: var(--main); }
+
+/* Buttons Navbar */
+#toggleMode, .lang-btn {
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-left: 10px;
+}
+#toggleMode { background: var(--main); color:#020617; }
+#toggleMode:hover { transform:scale(1.05); box-shadow:0 5px 20px rgba(56,189,248,0.3); }
+.lang-btn { background: var(--main); color:#020617; }
+.lang-btn:hover { transform:scale(1.05); box-shadow:0 5px 20px rgba(56,189,248,0.3); }
+
+/* Hero */
+.hero { height:100vh; display:flex; align-items:center; justify-content:center; text-align:center; padding:0 10%; transition:0.5s; }
+.hero-content h2 { font-size:24px; color: var(--muted-dark);}
+.hero-content h1 { font-size:52px; margin:15px 0; }
+.hero-content span { background: var(--gradient); -webkit-background-clip:text; color: transparent; }
+.hero-content p { max-width:600px; margin:auto; color: var(--muted-dark); }
+.hero-buttons { margin-top:35px; display:flex; gap:20px; justify-content:center; }
+
+/* Buttons */
+.btn { padding:14px 36px; border-radius:30px; text-decoration:none; font-weight:600; transition:0.3s; }
+.primary { background: var(--gradient); color:#020617; }
+.secondary { border:1px solid var(--main); color: var(--main); }
+.btn:hover { transform:translateY(-4px); box-shadow:0 10px 40px rgba(56,189,248,0.3); }
+
+/* Sections */
+section { padding:100px 10%; transition:0.5s; }
+.section-title { text-align:center; font-size:32px; margin-bottom:60px; background: var(--gradient); -webkit-background-clip:text; color: transparent; }
+
+/* Skills */
+.skill { margin-bottom:25px; }
+.progress { height:10px; border-radius:10px; overflow:hidden; background: var(--card-dark); }
+.progress div { height:100%; background: var(--gradient); }
+
+/* Projects */
+.project-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(260px,1fr)); gap:30px; }
+.project-card { position:relative; overflow:hidden; border-radius:20px; background: var(--card-dark); transition:0.4s; }
+.project-card img { width:100%; height:100%; object-fit:cover; transition:0.4s; }
+.project-card:hover img { transform:scale(1.1); }
+.overlay { position:absolute; inset:0; background: rgba(0,0,0,0.6); display:flex; justify-content:center; align-items:center; opacity:0; transition:0.4s; }
+.project-card:hover .overlay { opacity:1; }
+
+/* Contact */
+form { max-width:500px; margin:auto; }
+input, textarea { width:100%; background: var(--card-dark); border:1px solid rgba(255,255,255,0.1); padding:14px; border-radius:12px; color:white; margin-bottom:15px; transition:0.5s; }
+button { width:100%; padding:14px; background: var(--gradient); border:none; border-radius:12px; font-weight:bold; cursor:pointer; }
+.whatsapp-btn { display:block; text-align:center; margin-top:20px; padding:14px; background:#25D366; color:white; text-decoration:none; border-radius:12px; font-weight:bold; transition:0.3s; }
+.whatsapp-btn:hover { transform:scale(1.05); }
+
+/* Footer */
+footer { text-align:center; padding:30px; color: var(--muted-dark); transition:0.5s; }
+
+/* Animations */
+.reveal { opacity:0; transform:translateY(40px); transition:1s; }
+.reveal.active { opacity:1; transform:translateY(0); }
+
+/* Dark / Light Mode */
+body.light { background: var(--bg-light); color: var(--text-light); }
+body.light .navbar a { color: var(--muted-light); }
+body.light .progress { background: var(--card-light); }
+body.light .project-card { background: var(--card-light); }
+body.light input, body.light textarea { background: var(--card-light); color: var(--text-light); }
+body.light footer { color: var(--muted-light); }
