@@ -39,7 +39,9 @@ body { background: var(--bg-dark); color: var(--text-dark); line-height: 1.7; tr
 .lang-btn:hover { transform:scale(1.05); box-shadow:0 5px 20px rgba(56,189,248,0.3); }
 
 /* Hero */
-.hero { height:100vh; display:flex; align-items:center; justify-content:center; text-align:center; padding:0 10%; transition:0.5s; }
+.hero { height:100vh; display:flex; align-items:center; justify-content:center; text-align:center; padding:0 10%; transition:0.5s; position:relative; overflow:hidden; }
+#network-bg { position:absolute; top:0; left:0; width:100%; height:100%; z-index:0; }
+.hero-content { position:relative; z-index:1; }
 .hero-content h2 { font-size:24px; color: var(--muted-dark);}
 .hero-content h1 { font-size:52px; margin:15px 0; }
 .hero-content span { background: var(--gradient); -webkit-background-clip:text; color: transparent; }
@@ -90,3 +92,10 @@ body.light .progress { background: var(--card-light); }
 body.light .project-card { background: var(--card-light); }
 body.light input, body.light textarea { background: var(--card-light); color: var(--text-light); }
 body.light footer { color: var(--muted-light); }
+
+/* Responsive */
+@media (max-width:768px){
+    .hero-content h1 { font-size:36px; }
+    .hero-content h2 { font-size:20px; }
+    .hero-buttons { flex-direction: column; gap:10px; }
+}
