@@ -19,7 +19,12 @@ body { background: var(--bg-dark); color: var(--text-dark); line-height: 1.7; tr
 
 /* Navbar */
 .navbar { position: fixed; width:100%; top:0; padding:20px 10%; display:flex; justify-content:space-between; align-items:center; backdrop-filter: blur(10px); background: rgba(2,6,23,0.7); z-index:1000; transition:0.5s; }
-.logo { font-size:22px; font-weight:700; background: var(--gradient); -webkit-background-clip:text; color: transparent; }
+.logo { font-size:22px; font-weight:700; background: var(--gradient); 
+    -webkit-background-clip:text; 
+    -moz-background-clip:text; 
+    background-clip:text; 
+    color: transparent; 
+}
 .navbar a { color: var(--muted-dark); margin-right:25px; text-decoration:none; transition:0.3s; }
 .navbar a:hover { color: var(--main); }
 
@@ -44,19 +49,35 @@ body { background: var(--bg-dark); color: var(--text-dark); line-height: 1.7; tr
 .hero-content { position:relative; z-index:1; }
 .hero-content h2 { font-size:24px; color: var(--muted-dark);}
 .hero-content h1 { font-size:52px; margin:15px 0; }
-.hero-content span { background: var(--gradient); -webkit-background-clip:text; color: transparent; }
+/* Gradient Text Compatibility */
+.hero-content span { 
+    background: var(--gradient); 
+    -webkit-background-clip:text; 
+    -moz-background-clip:text; 
+    background-clip:text; 
+    color: transparent; 
+}
 .hero-content p { max-width:600px; margin:auto; color: var(--muted-dark); }
 .hero-buttons { margin-top:35px; display:flex; gap:20px; justify-content:center; }
 
 /* Buttons */
 .btn { padding:14px 36px; border-radius:30px; text-decoration:none; font-weight:600; transition:0.3s; }
-.primary { background: var(--gradient); color:#020617; }
+.primary { background: var(--gradient); color:#020617; 
+    -webkit-background-clip:text; 
+    -moz-background-clip:text; 
+    background-clip:text; 
+}
 .secondary { border:1px solid var(--main); color: var(--main); }
 .btn:hover { transform:translateY(-4px); box-shadow:0 10px 40px rgba(56,189,248,0.3); }
 
 /* Sections */
 section { padding:100px 10%; transition:0.5s; }
-.section-title { text-align:center; font-size:32px; margin-bottom:60px; background: var(--gradient); -webkit-background-clip:text; color: transparent; }
+.section-title { text-align:center; font-size:32px; margin-bottom:60px; background: var(--gradient); 
+    -webkit-background-clip:text; 
+    -moz-background-clip:text; 
+    background-clip:text; 
+    color: transparent; 
+}
 
 /* Skills */
 .skill { margin-bottom:25px; }
@@ -74,7 +95,11 @@ section { padding:100px 10%; transition:0.5s; }
 /* Contact */
 form { max-width:500px; margin:auto; }
 input, textarea { width:100%; background: var(--card-dark); border:1px solid rgba(255,255,255,0.1); padding:14px; border-radius:12px; color:white; margin-bottom:15px; transition:0.5s; }
-button { width:100%; padding:14px; background: var(--gradient); border:none; border-radius:12px; font-weight:bold; cursor:pointer; }
+button { width:100%; padding:14px; background: var(--gradient); border:none; border-radius:12px; font-weight:bold; cursor:pointer; 
+    -webkit-background-clip:text; 
+    -moz-background-clip:text; 
+    background-clip:text; 
+}
 .whatsapp-btn { display:block; text-align:center; margin-top:20px; padding:14px; background:#25D366; color:white; text-decoration:none; border-radius:12px; font-weight:bold; transition:0.3s; }
 .whatsapp-btn:hover { transform:scale(1.05); }
 
