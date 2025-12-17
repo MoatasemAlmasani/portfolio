@@ -76,5 +76,4 @@ function animateNodes() {
             }
         }
     }
-
-    // Draw nodes
+}
